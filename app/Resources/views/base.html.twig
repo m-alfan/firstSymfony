@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Symfony Training">
+        <meta name="author" content="Muhamad Alfan">
+        <title>{% block title %} Dashboard {% endblock %} {{ delimiterTitle }} {{ siteTitle }}</title>
+        {% stylesheets
+            '../vendor/bower/bootstrap/dist/css/bootstrap.min.css'
+            '../vendor/bower/metisMenu/dist/metisMenu.min.css'
+            '../vendor/bower/morrisjs/morris.css'
+            '../vendor/bower/font-awesome/css/font-awesome.min.css'
+            '@AppBundle/Resources/public/css/sb-admin-2.css' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+
+        {# Start Core Js Script #}
+        {% javascripts
+            '../vendor/bower/jquery/dist/jquery.min.js'
+            '../vendor/bower/bootstrap/dist/js/bootstrap.min.js'
+            '../vendor/bower/metisMenu/dist/metisMenu.min.js'
+            '../vendor/bower/raphael/raphael.min.js'
+            '../vendor/bower/morrisjs/morris.min.js'
+            '@AppBundle/Resources/public/js/sb-admin-2.js' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {# End Core Js Script #}
+    </body>
+</html>
