@@ -7,6 +7,7 @@
         <meta name="description" content="Symfony Training">
         <meta name="author" content="Muhamad Alfan">
         <title>{% block title %} Dashboard {% endblock %} {{ delimiterTitle }} {{ siteTitle }}</title>
+        {# Start Core CSS Script #}
         {% stylesheets
             '../vendor/bower/bootstrap/dist/css/bootstrap.min.css'
             '../vendor/bower/metisMenu/dist/metisMenu.min.css'
@@ -14,6 +15,7 @@
             '@AppBundle/Resources/public/css/sb-admin-2.css' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
+        {# End Core CSS Script #}
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
